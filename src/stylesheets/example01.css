@@ -1,1 +1,85 @@
 /* TODO: Example 01 (Activity 2) CSS goes here */
+
+html{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+header {
+    font-size: 2rem;
+    color: white;
+    padding: 0 1rem;
+    height: 100px;
+    background-color: darkslateblue;
+    line-height: 100px;
+}
+
+footer {
+    font-size: 1.5rem;
+    text-align: center;
+    height: 60px;
+    line-height: 60px; /* Makes the line height the same height as the container to center vertically */
+    background-color: darkslateblue;
+    color: white;
+}
+
+#main-container { /* DOUBLE CHECK THIS */
+    height: calc(100vh-160px); /* Tells browser to subtract the 160px */
+    width: 100vw;
+}
+
+body {
+    margin: 0;
+}
+
+#aside-col {
+    display: none;
+}
+
+#main-col {
+    display: table-cell;
+    background-color: lightgray;
+}
+
+#main-container .box {
+    height: 100px;
+    line-height: 100px;
+    background-color: slateblue;
+    text-align: center;
+    color: white;
+    margin: 1rem 1rem 0 1rem;
+}
+
+#main-container [featured] {
+    border: 5px solid slateblue;
+    background-color: black;
+}
+
+#main-container [selected] {
+    color: darkblue;
+    background-color: slateblue;
+}
+
+@media all and (min-width: 600px) {
+    #main-col .box {
+        float: left;
+        margin: 1rem 0 0 1rem;
+        width: calc(100% -3rem)/2;
+    }
+}
+
+@media all and (min-width: 800px) {
+    #main-col {
+        width: 70%;
+    }
+    #main-col .box {
+        float: left;
+        margin: 1rem 0 0 1rem;
+        width: calc(100% -5rem)/3; /* Divide by 3 because you want 3 columns */
+    }
+}
