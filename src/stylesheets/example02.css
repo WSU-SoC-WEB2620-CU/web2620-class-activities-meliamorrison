@@ -4,7 +4,7 @@ html {
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
-    background-color: #fffdf5;
+    background-color: #F6F8FA;
 }
 
 *, ::before, :after {
@@ -12,7 +12,7 @@ html {
 }
 
 nav {
-    border-bottom: 1px solid #9c6e79;
+    border-bottom: 1px solid #4b8fcc;
     padding: .5rem;
 }
 
@@ -52,25 +52,25 @@ nav > ul > li {
 /*Link Styling*/
 nav a:link, nav a:visited, nav a:active {
     text-decoration: none;
-    color: #6f2a45;
+    color: #4b8fcc;
 }
 
 nav a:hover {
     text-decoration: none;
-    color: #ffc0cb;
+    color: #A5C7E6;
 }
 
 footer {
     margin: 2em .5rem;
     padding: .5rem;
-    border-top: 1px solid #9c6e79;
+    border-top: 1px solid #4b8fcc;
 }
 
 /*Styling Images*/
 img {
     max-width: 300px;
     width: 50%;
-    border: 1px solid #7597a8;
+    border: 1px solid #4b8fcc;
     border-radius: 10px;
     margin: .75rem;
 }
@@ -86,7 +86,7 @@ article > h1::before {
     counter-increment: article; /* increases the value of article by 1 */
     content: "Article " counter(article) ": "; /* displays the word "Article, the value of the article counter, and
      a colon before the content of each h1" */
-    color: #6f2a45;
+    color: #4b8fcc;
 }
 
 /*Styling Circles*/
@@ -96,7 +96,7 @@ article > h1::before {
     height: 200px;
     border-radius: 100px;
     margin: .5rem;
-    background-color: steelblue;
+    background-color: #A5C7E6;
     color: black;
     font-size: 2rem;
     text-align: center;
@@ -132,19 +132,19 @@ article > h1::before {
 }
 
 .left-col {
-    background-color: lightsteelblue;
+    background-color: #D2E3F2;
     width: 25%;
     padding: 10px;
 }
 
 .middle-col {
-    background-color: steelblue;
+    background-color: #A5C7E6;
     width: 50%;
     padding: 10px;
 }
 
 .right-col {
-    background-color: lightsteelblue;
+    background-color: #D2E3F2;
     width: 25%;
     padding: 10px;
 }
