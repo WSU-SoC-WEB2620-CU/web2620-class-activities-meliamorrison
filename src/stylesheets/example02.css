@@ -1,1 +1,165 @@
 /* TODO: Example 02 (Activity 3) CSS goes here */
+
+html {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    background-color: #fffdf5;
+}
+
+*, ::before, :after {
+    box-sizing: inherit;
+}
+
+nav {
+    border-bottom: 1px solid #9c6e79;
+    padding: .5rem;
+}
+
+
+nav > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav > ul > li {
+    margin: 0;
+    display: inline-block;
+    margin-top: .5rem;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix::after { /* Fixes the issue of collapsed nav caused by float */
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* 
+.clearfix2 {
+    overflow: auto;
+}
+*/
+
+/*Link Styling*/
+nav a:link, nav a:visited, nav a:active {
+    text-decoration: none;
+    color: #6f2a45;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #ffc0cb;
+}
+
+footer {
+    margin: 2em .5rem;
+    padding: .5rem;
+    border-top: 1px solid #9c6e79;
+}
+
+/*Styling Images*/
+img {
+    max-width: 300px;
+    width: 50%;
+    border: 1px solid #7597a8;
+    border-radius: 10px;
+    margin: .75rem;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    counter-reset: article; /* set a counter named article and its initial value is 0 */
+}
+
+/*Styling Articles*/
+article > h1::before {
+    counter-increment: article; /* increases the value of article by 1 */
+    content: "Article " counter(article) ": "; /* displays the word "Article, the value of the article counter, and
+     a colon before the content of each h1" */
+    color: #6f2a45;
+}
+
+/*Styling Circles*/
+.circle {
+    float: left;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin: .5rem;
+    background-color: steelblue;
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.vcenter {
+    line-height: 200px;
+}
+
+.vcenter2 {
+    line-height: 200px;
+    margin: 0 calc((100% -800px)/8);
+}
+
+/*.vcenter2 > .circle::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}*/
+
+/*.vcenter3 > .circle {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}*/
+
+/*Equal-Height Columns*/
+.column {
+    float: left;
+    padding: 10px;
+    color: black;
+}
+
+.left-col {
+    background-color: lightsteelblue;
+    width: 25%;
+    padding: 10px;
+}
+
+.middle-col {
+    background-color: steelblue;
+    width: 50%;
+    padding: 10px;
+}
+
+.right-col {
+    background-color: lightsteelblue;
+    width: 25%;
+    padding: 10px;
+}
+
+.equal-height {
+    display: table;
+}
+
+.equal-height .column {
+    float: none;
+    display: table-cell;
+}
+
+/*Multi Column Styles*/
+.multi-col {
+    columns: 3;
+    column-gap: 2rem;
+}
