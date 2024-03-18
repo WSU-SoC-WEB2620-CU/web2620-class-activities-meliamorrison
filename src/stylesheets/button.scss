@@ -28,7 +28,7 @@
     @each $kind in $button-kinds{
       $ndx: index($button-kinds, $kind);
       &.#{$kind}{
-          @include make-button(nth($button-colors, $ndx 2));
+          @include make-button(nth($button-colors, $ndx));
       }
     }
   
